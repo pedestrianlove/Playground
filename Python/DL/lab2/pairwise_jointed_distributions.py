@@ -1,4 +1,3 @@
-%matplotlib inline
 import os
 import matplotlib.pyplot as plot
 import seaborn
@@ -20,6 +19,13 @@ X = interested_data.drop ('Class label', 1)
 Y = interested_data['Class label']
 
 print (interested_data.head ())
-seaborn.set (style = 'whitegrid', context = 'notebook')
 
-seaborn.pairplot ()
+seaborn.set (style = 'whitegrid', context = 'notebook')
+seaborn.pairplot (interested_data, hue = 'Class label', size = 2.5)
+plot.tight_layout ()
+
+if not os.path.exists ('./output') :
+	os.makedirs ('./output')
+plot.savefig ('./output/fig-wine-scatter.png', dpi = 300)
+plot.show ()
+

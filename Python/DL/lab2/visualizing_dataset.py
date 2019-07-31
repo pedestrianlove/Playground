@@ -15,4 +15,4 @@ interested_data.columns = [
 X = interested_data.drop ('Class label', 1)
 Y = interested_data['Class label']
 
-print (interested_data.head ())
+print (interested_data)

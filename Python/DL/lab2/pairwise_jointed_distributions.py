@@ -21,9 +21,9 @@ Y = interested_data['Class label']
 print (interested_data.head ())
 
 seaborn.set (style = 'whitegrid', context = 'notebook')
-seaborn.pairplot (interested_data, hue = 'Class label', size = 2.5)
+seaborn.pairplot (interested_data, hue = 'Class label', height = 2.5)
 plot.tight_layout ()
-
+#FIXME Singular matrix error
 if not os.path.exists ('./output') :
 	os.makedirs ('./output')
 plot.savefig ('./output/fig-wine-scatter.png', dpi = 300)

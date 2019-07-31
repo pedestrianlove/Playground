@@ -15,7 +15,7 @@ interested_data.columns = [
         'Prolinee'
 ]
 
-X = interested_data.drop ('Class label', 1)
+X = interested_data.drop ('Class label', axis = 'columns')
 Y = interested_data['Class label']
 
 print (interested_data.head ())
